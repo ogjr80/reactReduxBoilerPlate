@@ -1,10 +1,11 @@
-import 'materialize-css/dist/css/materialize.min.css';
+// import 'materialize-css/dist/css/materialize.min.css';
 import React, {Component} from 'react';
 import ProductList from './ProductList';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Header from './Header';
+import Profile from './Profile';
 import Home from './Home';
 
 
@@ -21,6 +22,7 @@ class App extends Component{
           <Header />
           <Route exact path="/" component={Home} />
           <Route path='/productList' component={ProductList} />
+          <Route path='/profile' component ={Profile}/>
         </div>
       </BrowserRouter>
     )
